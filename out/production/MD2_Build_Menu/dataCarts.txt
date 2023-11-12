@@ -1,0 +1,7 @@
+1,45000.0,true,Wed Sep 13 14:15:56 ICT 2023,1,
+3,0.0,false,Wed Sep 13 14:15:56 ICT 2023,
+2,0.0,false,Wed Sep 13 14:14:54 ICT 2023,
+4,2.0005E7,true,Wed Sep 13 14:43:32 ICT 2023,2,3,
+6,1000000.0,true,Wed Sep 13 14:44:03 ICT 2023,4,
+7,0.0,false,Wed Sep 13 14:44:03 ICT 2023,
+5,0.0,false,Wed Sep 13 14:40:45 ICT 2023,

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlbumManager/AlbumManager.iml" filepath="$PROJECT_DIR$/AlbumManager/AlbumManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Candidate/Candidate.iml" filepath="$PROJECT_DIR$/Candidate/Candidate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MD2_Build_Menu.iml" filepath="$PROJECT_DIR$/.idea/MD2_Build_Menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersonnelManagement/PersonnelManagement.iml" filepath="$PROJECT_DIR$/PersonnelManagement/PersonnelManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StreetManager/StreetManager.iml" filepath="$PROJECT_DIR$/StreetManager/StreetManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StudentManager/StudentManager.iml" filepath="$PROJECT_DIR$/StudentManager/StudentManager.iml" />
+    </modules>
+  </component>
+</project>
