@@ -118,5 +118,10 @@ public class LibraryManager implements GeneralManager{
 //        libraryManager.deleteById(6);
 //        libraryManager.showAll();
         libraryManager.showAllBook();
+        if (m1 instanceof Book) {
+            System.out.println("đúng");
+        } else {
+            System.out.println("sai");
+        }
     }
 }
