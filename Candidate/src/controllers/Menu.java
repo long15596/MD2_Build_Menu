@@ -1,14 +1,10 @@
 package controllers;
 
-import models.Candidate;
 import models.CandidateA;
 import models.CandidateB;
 import models.CandidateC;
 import services.CandidateManager;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -39,12 +35,14 @@ public class Menu {
                 case 3:
                     System.out.println("Enter ID");
                     int findId = inputInt.nextInt();
-                    candidateManager.findById(findId);
+                    System.out.println(candidateManager.findById(findId));
+                    System.out.println("Find Success");;
                     break;
                 case 4:
                     System.out.println("Enter Name");
                     String findName = inputString.nextLine();
-                    candidateManager.findByName(findName);
+                    System.out.println(candidateManager.findByName(findName));
+                    System.out.println("Find Success");;
                     break;
                 case 5:
                     System.out.println("Enter ID");
@@ -76,42 +74,53 @@ public class Menu {
                 case 1:
                     System.out.println("_____Add Student_____");
                     System.out.println("Name");
-                    String name = inputString.nextLine();
+                    String nameA = inputString.nextLine();
                     System.out.println("Address");
-                    String address = inputString.nextLine();
+                    String addressA = inputString.nextLine();
                     System.out.println("Priority");
-                    int priority = inputInt.nextInt();
+                    int priorityA = inputInt.nextInt();
+                    candidateManager.add(new CandidateA(nameA, addressA, priorityA));
                     System.out.println("Add Success");
                     break;
                 case 2:
-//                    CandidateB candidate1 = addStudent();
-//                    CandidateB candidateB = (CandidateB) candidate1;
-//                    candidateManager.add(candidateB);
+                    System.out.println("_____Add Student_____");
+                    System.out.println("Name");
+                    String nameB = inputString.nextLine();
+                    System.out.println("Address");
+                    String addressB = inputString.nextLine();
+                    System.out.println("Priority");
+                    int priorityB = inputInt.nextInt();
+                    candidateManager.add(new CandidateB(nameB, addressB, priorityB));
                     System.out.println("Add Success");
                     break;
                 case 3:
-//                    CandidateC candidate2 = addStudent();
-//                    CandidateC candidateC = (CandidateC) candidate2;
-//                    candidateManager.add(candidateC);
+                    System.out.println("_____Add Student_____");
+                    System.out.println("Name");
+                    String nameC = inputString.nextLine();
+                    System.out.println("Address");
+                    String addressC = inputString.nextLine();
+                    System.out.println("Priority");
+                    int priorityC = inputInt.nextInt();
+                    candidateManager.add(new CandidateC(nameC, addressC, priorityC));
                     System.out.println("Add Success");
                     break;
             }
         } while (choice != 0);
     }
 
-    public Candidate addStudent() {
-        System.out.println("_____Add Student_____");
-        System.out.println("Name");
-        String name = inputString.nextLine();
-        System.out.println("Address");
-        String address = inputString.nextLine();
-        System.out.println("Priority");
-        int priority = inputInt.nextInt();
-        return new Candidate(name, address, priority);
-    }
-    public static void main(String[] args) {
-        Menu menu = new Menu();
-        CandidateA student = (CandidateA) menu.addStudent();
-        System.out.println(student);
-    }
+//    public Candidate addStudent() {
+//        System.out.println("_____Add Student_____");
+//        System.out.println("Name");
+//        String name = inputString.nextLine();
+//        System.out.println("Address");
+//        String address = inputString.nextLine();
+//        System.out.println("Priority");
+//        int priority = inputInt.nextInt();
+//        return new Candidate(name, address, priority);
+//    }
+//    public static void main(String[] args) {
+//        Menu menu = new Menu();
+//        CandidateA student = (CandidateA) menu.addStudent();
+//        System.out.println(student);
+//    }
 }

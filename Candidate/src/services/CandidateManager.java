@@ -1,9 +1,6 @@
 package services;
 
 import models.Candidate;
-import models.CandidateA;
-import models.CandidateB;
-import models.CandidateC;
 
 import java.util.ArrayList;
 import java.util.List;
