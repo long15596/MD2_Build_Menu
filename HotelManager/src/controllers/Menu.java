@@ -56,8 +56,8 @@ public class Menu {
         int dayRent = inputInt.nextInt();
         inputString.nextLine();
         System.out.println("Choice Room Type");
-        String typeRoom = inputString.nextLine();
-        Room room = (Room) choiceRoomType(typeRoom);
+        String roomType = inputString.nextLine();
+        Room room = (Room) choiceRoomType(roomType);
         hotelManager.add(new Customer(name, age, room, dayRent));
         System.out.println("Add Success");
     }

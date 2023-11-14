@@ -5,15 +5,15 @@ public class Customer {
     private String name;
     private int age;
     private Room room;
-    private double hoursRent;
+    private double dayRent;
     private static int idIncrement = 1;
 
-    public Customer(String name, int age, Room room, double hoursRent) {
+    public Customer(String name, int age, Room room, double dayRent) {
         this.id = idIncrement;
         this.name = name;
         this.age = age;
         this.room = room;
-        this.hoursRent = hoursRent;
+        this.dayRent = dayRent;
         idIncrement++;
     }
 
@@ -49,15 +49,15 @@ public class Customer {
         this.room = room;
     }
 
-    public double getHoursRent() {
-        return hoursRent;
+    public double getDayRent() {
+        return dayRent;
     }
 
-    public void setHoursRent(double hoursRent) {
-        this.hoursRent = hoursRent;
+    public void setDayRent(double dayRent) {
+        this.dayRent = dayRent;
     }
     public double grossRent() {
-        return hoursRent * room.getPrice();
+        return dayRent * room.getPrice();
     }
     @Override
     public String toString() {
@@ -66,6 +66,6 @@ public class Customer {
                 "Name: " + name + "\n" +
                 "Age: " + age + "\n" +
                 "Room: " + room + "\n" +
-                "Hours Rent: " + hoursRent + "\n";
+                "Day Rent: " + dayRent + "\n";
     }
 }
