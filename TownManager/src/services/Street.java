@@ -14,7 +14,6 @@ public class Street implements GeneralManager{
     public void add(Object family) {
         families.add((Family) family);
     }
-
     @Override
     public void showAll() {
         for (Family f: families) System.out.println(f);

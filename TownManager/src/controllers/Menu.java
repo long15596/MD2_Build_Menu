@@ -26,7 +26,7 @@ public class Menu {
                     Family family = new Family();
                     street.add(family);
                     System.out.println("Add Family Success\n" +
-                            "Family Number: " + family.getHouseNumber());
+                            "House Number: " + family.getHouseNumber());
                     addPersonMenu(family);
                     break;
                 case 2:
@@ -72,7 +72,6 @@ public class Menu {
                     break;
             }
         } while (choice != 0);
-
     }
     private void choiceHouse() {
         System.out.println("Enter Number House: ");
@@ -134,12 +133,12 @@ public class Menu {
                 case 1:
                     System.out.print("Enter House Number");
                     int houseNumber = inputInt.nextInt();
-                    street.findById(houseNumber);
+                    System.out.println(street.findById(houseNumber));
                     break;
                 case 2:
                     System.out.print("Enter Number Person");
                     int numberPeron = inputInt.nextInt();
-                    street.findByPersonNumber(numberPeron);
+                    System.out.println(street.findByPersonNumber(numberPeron));
                     break;
             }
         }while (choice != 0);

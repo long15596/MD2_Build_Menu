@@ -68,7 +68,10 @@ public class Family implements GeneralManager{
     public void deleteById(int id) {
         people.removeIf(p -> p.getId() == id);
     }
-
+    public void editById(int id, Object object) {
+        people.remove(findById(id));
+        people.set(id -1, (Person) object);
+    }
     @Override
     public String toString() {
         return "House Number: " + houseNumber + "\n"
