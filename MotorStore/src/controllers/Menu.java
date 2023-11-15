@@ -47,6 +47,7 @@ public class Menu {
         }while (choice != 0);
     }
     private void addMenu(){
+        System.out.println("____Product Information____");
         System.out.print("Enter Name: ");
         String name = inputString.nextLine();
         System.out.print("Enter Price: ");
