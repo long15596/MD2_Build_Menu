@@ -43,18 +43,7 @@ public class Menu {
                     sortMenu();
                     break;
                 case 6:
-                    System.out.println("Enter Name Product: ");
-                    String findName = inputString.nextLine();
-                    Motor newMotor = (Motor) motorStore.findByName(findName);
-                    System.out.println("Product To Edit: \n" + newMotor);
-                    System.out.println("Enter New Name: ");
-                    String newName = inputString.nextLine();
-                    System.out.println("Enter New Price: ");
-                    double newPrice = inputFloat.nextFloat();
-                    System.out.println("Enter New Cc: ");
-                    int newCc = inputInt.nextInt();
-                    motorStore.edit(newMotor, newName, newPrice, newCc);
-                    System.out.println("Edit Success");
+                    editMenu();
                     break;
                 default:
                     System.out.println("Invalid choice");
@@ -121,6 +110,66 @@ public class Menu {
                     break;
                 default:
                     System.out.println("Invalid");
+            }
+        } while (choice != 0);
+    }
+    private void editMenu() {
+        int choice;
+        do {
+            System.out.println("____Edit Menu____\n" +
+                    "1. Edit All Information\n" +
+                    "2. Edit Individual Information\n" +
+                    "0. Exit");
+            System.out.println("Enter Your choice");
+            choice = inputInt.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter Name Product: ");
+                    String findName = inputString.nextLine();
+                    Motor newMotor = (Motor) motorStore.findByName(findName);
+                    System.out.println("Product To Edit: \n" + newMotor);
+                    System.out.println("Enter New Name: ");
+                    String newName = inputString.nextLine();
+                    System.out.println("Enter New Price: ");
+                    double newPrice = inputFloat.nextFloat();
+                    System.out.println("Enter New Cc: ");
+                    int newCc = inputInt.nextInt();
+                    motorStore.edit(newMotor, newName, newPrice, newCc);
+                    System.out.println("Edit Success");
+                    break;
+                case 2:
+                    System.out.println("Enter Name Product: ");
+                    String findName2 = inputString.nextLine();
+                    Motor newMotor2 = (Motor) motorStore.findByName(findName2);
+                    do {
+                        System.out.println("Choice Individual Information\n" +
+                                "1. Name\n" +
+                                "2. Price\n" +
+                                "3. Cc\n" +
+                                "0. Exit");
+                        System.out.print("Enter your choice: ");
+                        choice = inputInt.nextInt();
+                        switch (choice) {
+                            case 1:
+                                System.out.println("Enter New Name");
+                                String newName2 = inputString.nextLine();
+                                newMotor2.setName(newName2);
+                                break;
+                            case 2:
+                                System.out.println("Enter New Price");
+                                double newPrice2 = inputFloat.nextFloat();
+                                newMotor2.setPrice(newPrice2);
+                                break;
+                            case 3:
+                                System.out.println("Enter New Cc");
+                                int newCc2 = inputInt.nextInt();
+                                newMotor2.setCc(newCc2);
+                                break;
+                        }
+                    } while (choice != 0);
+                    System.out.println(newMotor2);
+                    System.out.println("Edit Success");
+                    break;
             }
         } while (choice != 0);
     }
