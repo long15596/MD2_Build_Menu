@@ -3,9 +3,11 @@ package services;
 import models.Motor;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 
-public class MotorStore implements IManager<Object, String>{
+public class MotorStore implements IManager<Object, String, Integer>{
     List<Motor> motorList = new ArrayList<>();
     @Override
     public void showAll() {
@@ -20,7 +22,7 @@ public class MotorStore implements IManager<Object, String>{
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         motorList.removeIf(motor -> motor.getId() == id);
     }
 
@@ -33,6 +35,19 @@ public class MotorStore implements IManager<Object, String>{
         }
         return "Not Found";
     }
+    public void edit(Motor newMotor, String newName, double newPrice, int newCc) {
+       if (newMotor.equals("Not Found")) {
+           System.out.println("Not Found");
+       } else {
+           newMotor.setName(newName);
+           newMotor.setPrice(newPrice);
+           newMotor.setCc(newCc);
+           for (int i = 0; i < motorList.size(); i++) {
+               if(newMotor == motorList.get(i))
+                   motorList.set(i, newMotor);
+           }
+       }
+    }
 
 
     public Object findByPrice(float price) {
@@ -42,13 +57,14 @@ public class MotorStore implements IManager<Object, String>{
         return "Not Found";
     }
     public void sortDownCc() {
-        List<Motor> sortList = motorList;
-        sortList.sort((m1, m2) -> Integer.compare(m1.getCc(), m2.getCc()));
+        List<Motor> sortList = new LinkedList<>(motorList);
+        sortList.sort(Comparator.comparingInt(Motor::getCc));
         System.out.println(sortList);
     }
     public void sortUpCc() {
-        List<Motor> sortList = motorList;
+        List<Motor> sortList = new LinkedList<>(motorList);
         sortList.sort((m1, m2) -> Integer.compare(m2.getCc(), m1.getCc()));
         System.out.println(sortList);
     }
+
 }

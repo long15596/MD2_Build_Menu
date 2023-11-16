@@ -1,8 +1,8 @@
 package services;
 
-public interface IManager<O, T> {
+public interface IManager<O, T, N> {
     void showAll();
     void add(O o);
-    void delete(int id);
+    void delete(N i);
     O findByName(T n);
 }

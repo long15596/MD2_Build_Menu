@@ -19,6 +19,7 @@ public class Menu {
                     "3. Search\n" +
                     "4. Remove Products By Id\n" +
                     "5. Sort Products\n" +
+                    "6. Edit Information\n" +
                     "0. Exit");
             System.out.print("Enter your choice: ");
             choice = inputInt.nextInt();
@@ -40,6 +41,20 @@ public class Menu {
                     break;
                 case 5:
                     sortMenu();
+                    break;
+                case 6:
+                    System.out.println("Enter Name Product: ");
+                    String findName = inputString.nextLine();
+                    Motor newMotor = (Motor) motorStore.findByName(findName);
+                    System.out.println("Product To Edit: \n" + newMotor);
+                    System.out.println("Enter New Name: ");
+                    String newName = inputString.nextLine();
+                    System.out.println("Enter New Price: ");
+                    double newPrice = inputFloat.nextFloat();
+                    System.out.println("Enter New Cc: ");
+                    int newCc = inputInt.nextInt();
+                    motorStore.edit(newMotor, newName, newPrice, newCc);
+                    System.out.println("Edit Success");
                     break;
                 default:
                     System.out.println("Invalid choice");
