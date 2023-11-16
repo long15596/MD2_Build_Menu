@@ -36,21 +36,22 @@ public class MotorStore implements IManager<Object, String, Integer>{
         return "Not Found";
     }
     public void edit(Motor newMotor, String newName, double newPrice, int newCc) {
-       if (newMotor.equals("Not Found")) {
-           System.out.println("Not Found");
-       } else {
            newMotor.setName(newName);
            newMotor.setPrice(newPrice);
            newMotor.setCc(newCc);
            for (int i = 0; i < motorList.size(); i++) {
                if(newMotor == motorList.get(i))
                    motorList.set(i, newMotor);
-           }
        }
     }
 
-
-    public Object findByPrice(float price) {
+    public Object findByPriceRange(double maxPrice, double minPrice) {
+        for (Motor motor : motorList) {
+            if (motor.getPrice() < maxPrice && motor.getPrice() > minPrice) return motor;
+        }
+        return "Not Found";
+    }
+    public Object findByPrice(double price) {
         for (Motor motor : motorList) {
             if (motor.getPrice() == price) return motor;
         }

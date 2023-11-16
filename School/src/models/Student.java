@@ -3,15 +3,20 @@ package models;
 public class Student {
     private int id;
     private String name;
-    private int age;
-    private String homeland;
+    private Double match;
+    private Double physical;
+    private Double chemistry;
     private static int idIncrement = 1;
 
-    public Student(String name, int age, String homeland) {
+    public Student() {
+    }
+
+    public Student(String name, Double match, Double physical, Double chemistry) {
+        this.id = idIncrement++;
         this.name = name;
-        this.age = age;
-        this.homeland = homeland;
-        this.id = idIncrement;
+        this.match = match;
+        this.physical = physical;
+        this.chemistry = chemistry;
         idIncrement++;
     }
 
@@ -31,28 +36,39 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public Double getMatch() {
+        return match;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setMatch(Double match) {
+        this.match = match;
     }
 
-    public String getHomeland() {
-        return homeland;
+    public Double getPhysical() {
+        return physical;
     }
 
-    public void setHomeland(String homeland) {
-        this.homeland = homeland;
+    public void setPhysical(Double physical) {
+        this.physical = physical;
     }
 
+    public Double getChemistry() {
+        return chemistry;
+    }
+
+    public void setChemistry(Double chemistry) {
+        this.chemistry = chemistry;
+    }
+    public Double getGpa(){
+        return match * physical * chemistry;
+    }
     @Override
     public String toString() {
-        return "Student\n" +
-                "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Age: " + age + "\n" +
-                "Homeland: " + homeland + "\n";
+        return "Student Id: " + id + "\n" +
+                "Name " + name + "\n" +
+                "Physical: " + physical + "\n" +
+                "Chemistry: " + chemistry + "\n" +
+                "Match: " + match + "\n" +
+                "Grade Point Average: " + getGpa() + "\n";
     }
 }

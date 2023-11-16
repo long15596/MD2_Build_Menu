@@ -1,8 +1,9 @@
 package services;
 
-public interface GeneralManager {
-    void add(Object o);
+public interface GeneralManager<O, N> {
+    void add(O o);
     void showAll();
-    Object findById(int id);
-    void deleteById(int id);
+    O findById(N n);
+    void deleteById(N n);
+    void edit(N n, O o);
 }

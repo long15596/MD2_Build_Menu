@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Menu {
     MotorStore motorStore = new MotorStore();
     Scanner inputInt = new Scanner(System.in);
-    Scanner inputFloat = new Scanner(System.in);
+    Scanner inputDouble = new Scanner(System.in);
     Scanner inputString = new Scanner(System.in);
     public void showMenu() {
         int choice;
@@ -55,7 +55,7 @@ public class Menu {
         System.out.print("Enter Name: ");
         String name = inputString.nextLine();
         System.out.print("Enter Price: ");
-        float price = inputFloat.nextFloat();
+        double price = inputDouble.nextDouble();
         System.out.print("Enter Cylinder Capacity: ");
         int cc = inputInt.nextInt();
         Motor newMotor = new Motor(name, price, cc);
@@ -68,18 +68,27 @@ public class Menu {
         do {
             System.out.println("_____Search_____\n" +
                     "1. Search By Price\n" +
-                    "2. Search By Name\n" +
+                    "2. Search By Price Range\n" +
+                    "3. Search By Name\n" +
                     "0. Exit");
             System.out.print("Enter your choice: ");
             choice = inputInt.nextInt();
             switch (choice) {
                 case 1:
                     System.out.print("Enter Id: ");
-                    int price = inputInt.nextInt();
+                    double price = inputDouble.nextDouble();
                     System.out.println(motorStore.findByPrice(price));
                     System.out.println("Find Success");
                     break;
                 case 2:
+                    System.out.print("Enter Min Price: ");
+                    double minPrice = inputDouble.nextDouble();
+                    System.out.print("Enter Max Price: ");
+                    double maxPrice = inputDouble.nextDouble();
+                    System.out.println(motorStore.findByPriceRange(maxPrice, minPrice));
+                    System.out.println("Find Success");
+                    break;
+                case 3:
                     System.out.println("Enter Name: ");
                     String name = inputString.nextLine();
                     System.out.println(motorStore.findByName(name));
@@ -131,7 +140,7 @@ public class Menu {
                     System.out.println("Enter New Name: ");
                     String newName = inputString.nextLine();
                     System.out.println("Enter New Price: ");
-                    double newPrice = inputFloat.nextFloat();
+                    double newPrice = inputDouble.nextFloat();
                     System.out.println("Enter New Cc: ");
                     int newCc = inputInt.nextInt();
                     motorStore.edit(newMotor, newName, newPrice, newCc);
@@ -157,7 +166,7 @@ public class Menu {
                                 break;
                             case 2:
                                 System.out.println("Enter New Price");
-                                double newPrice2 = inputFloat.nextFloat();
+                                double newPrice2 = inputDouble.nextFloat();
                                 newMotor2.setPrice(newPrice2);
                                 break;
                             case 3:
