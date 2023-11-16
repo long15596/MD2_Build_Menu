@@ -5,7 +5,7 @@ import models.Motor;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MotorStore implements IManager{
+public class MotorStore implements IManager<Object, String>{
     List<Motor> motorList = new ArrayList<>();
     @Override
     public void showAll() {
@@ -33,6 +33,8 @@ public class MotorStore implements IManager{
         }
         return "Not Found";
     }
+
+
     public Object findByPrice(float price) {
         for (Motor motor : motorList) {
             if (motor.getPrice() == price) return motor;
@@ -40,11 +42,13 @@ public class MotorStore implements IManager{
         return "Not Found";
     }
     public void sortDownCc() {
-        motorList.sort((m1, m2) -> Float.compare((float) m1.getCc(), (float) m2.getCc()));
-        System.out.println(motorList);
+        List<Motor> sortList = motorList;
+        sortList.sort((m1, m2) -> Integer.compare(m1.getCc(), m2.getCc()));
+        System.out.println(sortList);
     }
     public void sortUpCc() {
-        motorList.sort((m1, m2) -> Float.compare((float) m2.getCc(), (float) m1.getCc()));
-        System.out.println(motorList);
+        List<Motor> sortList = motorList;
+        sortList.sort((m1, m2) -> Integer.compare(m2.getCc(), m1.getCc()));
+        System.out.println(sortList);
     }
 }

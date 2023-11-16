@@ -8,7 +8,7 @@ public class Motor {
     private static int idIncrement = 1;
 
     public Motor(String name, double price, int cc) {
-        this.id = idIncrement++;
+        this.id = idIncrement;
         this.name = name;
         this.price = price;
         this.cc = cc;

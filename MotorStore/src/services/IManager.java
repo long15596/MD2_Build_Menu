@@ -1,8 +1,8 @@
 package services;
 
-public interface IManager {
+public interface IManager<O, T> {
     void showAll();
-    void add(Object obj);
+    void add(O o);
     void delete(int id);
-    Object findByName(String name);
+    O findByName(T n);
 }
