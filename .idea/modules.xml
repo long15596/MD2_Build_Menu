@@ -4,11 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlbumManager/AlbumManager.iml" filepath="$PROJECT_DIR$/AlbumManager/AlbumManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/Candidate/Candidate.iml" filepath="$PROJECT_DIR$/Candidate/Candidate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CircleK/CircleK.iml" filepath="$PROJECT_DIR$/CircleK/CircleK.iml" />
       <module fileurl="file://$PROJECT_DIR$/HotelManager/HotelManager.iml" filepath="$PROJECT_DIR$/HotelManager/HotelManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MD2_Build_Menu.iml" filepath="$PROJECT_DIR$/.idea/MD2_Build_Menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/MotorStore/MotorStore.iml" filepath="$PROJECT_DIR$/MotorStore/MotorStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/PersonnelManagement/PersonnelManagement.iml" filepath="$PROJECT_DIR$/PersonnelManagement/PersonnelManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProductManager/ProductManager.iml" filepath="$PROJECT_DIR$/ProductManager/ProductManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/School/School.iml" filepath="$PROJECT_DIR$/School/School.iml" />
       <module fileurl="file://$PROJECT_DIR$/StreetManager/StreetManager.iml" filepath="$PROJECT_DIR$/StreetManager/StreetManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentManager/StudentManager.iml" filepath="$PROJECT_DIR$/StudentManager/StudentManager.iml" />

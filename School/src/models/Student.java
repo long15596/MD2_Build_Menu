@@ -60,7 +60,7 @@ public class Student {
         this.chemistry = chemistry;
     }
     public Double getGpa(){
-        return match * physical * chemistry;
+        return (match + physical + chemistry) / 3;
     }
     @Override
     public String toString() {

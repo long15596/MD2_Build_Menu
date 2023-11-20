@@ -225,7 +225,7 @@ public class Menu {
                                 break;
                             default:
                                 System.out.println("Re-import");
-                        };
+                        }
                     } while (searchChoice != 0);
                     break;
                 case 4:
